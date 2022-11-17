@@ -80,9 +80,20 @@
                             <constraint firstItem="MHI-nm-u11" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ZaU-0g-CVb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CurrentLabelLetter" destination="2z1-Nb-jgD" id="z7g-TP-D7g"/>
+                        <outlet property="stackView" destination="WQz-2c-UlM" id="vVJ-pc-M0C"/>
+                        <outletCollection property="wordLabels" destination="Vz5-Gm-Bld" collectionClass="NSMutableArray" id="eAs-Jm-dej"/>
+                        <outletCollection property="wordLabels" destination="zOM-pz-yaX" collectionClass="NSMutableArray" id="CYN-Uu-mOA"/>
+                        <outletCollection property="wordLabels" destination="bMq-vX-gOH" collectionClass="NSMutableArray" id="skh-Z2-J4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="pZY-q1-ObT"/>
+                <tapGestureRecognizer id="pZY-q1-ObT">
+                    <connections>
+                        <action selector="whenTapped:" destination="BYZ-38-t0r" id="cT2-Pf-7zG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="138" y="4"/>
         </scene>
