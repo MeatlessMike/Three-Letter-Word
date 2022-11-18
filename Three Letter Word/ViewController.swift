@@ -22,26 +22,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var CurrentLabelLetter: UILabel!
     
     @IBAction func whenTapped(_ sender: UITapGestureRecognizer) {
-        let selectedPoint = sender.location(in: stackView)
+        let selectedPoint = ((sender as! AnyObject).location(in: stackView))
         print(selectedPoint)
+        currentLetter = letters[counter]
+        CurrentLabelLetter.text = currentLetter
         
         for label in wordLabels {
             if label.frame.contains(selectedPoint) {
                 label.text = "\(currentLetter!)"
+                print(currentLetter)
                 
-                counter += 1
                 
-                if counter == 26
-                {
-                    counter = resetCounter()
-                    
-                    getAndSetCurrentLetter()
-                    
-                    currentLetter = letters[counter]
-                    CurrentLabelLetter.text=currentLetter
-                    
-                }
+                
+               
             }
+        }
+        counter += 1
+        if counter == 26
+        {
+            counter = resetCounter()
+            
+            getAndSetCurrentLetter()
+            
+            currentLetter = letters[counter]
+            CurrentLabelLetter.text=currentLetter
+            
         }
     }
     
@@ -49,7 +54,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        getAndSetCurrentLetter()
+       // getAndSetCurrentLetter()
     }
     func getAndSetCurrentLetter()
     {
