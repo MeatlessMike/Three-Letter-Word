@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         {
             counter = resetCounter()
             
-            getAndSetCurrentLetter()
+           // getAndSetCurrentLetter()
             
             currentLetter = letters[counter]
             CurrentLabelLetter.text=currentLetter
@@ -73,6 +73,7 @@ class ViewController: UIViewController {
                 present(alert, animated: true, completion: nil)
                 return 0
                 }
+    
         }
 
     
